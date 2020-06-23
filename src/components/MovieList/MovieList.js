@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import MovieDescription from '../MovieDescription/MovieDescription';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+
 class MoviesList extends Component {
 componentDidMount(){
     this.getMovies();

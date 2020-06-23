@@ -3,6 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import MovieList from '../MovieList/MovieList';
 import MovieDescription from '../MovieDescription/MovieDescription'
+import Edit from '../EditPage/EditPage';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -10,7 +11,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>Empty Page</p>
         <Router>
           <ul>
             <li>
@@ -19,10 +19,11 @@ class App extends Component {
           </ul>
           <Route exact path = '/' component= {MovieList} />
           <Route path = '/MovieDescription' component = {MovieDescription} />
+          <Route path = '/details' component = {Edit}/>
         </Router>
       </div>
     );
   }
 }
 
-export default App;
+export default connect()(App);

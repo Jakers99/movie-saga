@@ -18,11 +18,17 @@ render(){
                     <Link to = '/'>Back to list</Link>
                 </ul>
             </Router>
+            <div className = 'floadLeft'>
             <h1>Movie Information:</h1>
-            <button onClick={this.edit}>Edit</button>
                 <img src={this.props.reduxStore.foundMovie.poster} alt='this is the movie poster'/>
+                <section>
+                    <button onClick={this.edit}>Edit</button>
+                </section>
                 <h1>{this.props.reduxStore.foundMovie.title}</h1>
+            </div>
+                <div className='description'>
                 <p>{this.props.reduxStore.foundMovie.description}</p>
+            </div>
         </section >
         );
     }

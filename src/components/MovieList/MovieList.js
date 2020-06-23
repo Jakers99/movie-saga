@@ -32,7 +32,7 @@ getMovies = (event) => {
                  
                     
                     {this.props.reduxStore.movies.map(movie => (
-                        <li key={movie.id}><img src={movie.poster} onClick={() => this.moviePage(movie)} alt='movie poster' /><h1>{movie.title}</h1><p>{movie.description}</p> </li>
+                        <li key={movie.id}><img src={movie.poster} onClick={() => this.moviePage(movie)} alt='movie poster' /><h1>{movie.title}</h1> </li>
                     ))}
                            
                    

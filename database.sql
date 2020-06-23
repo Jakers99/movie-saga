@@ -22,7 +22,29 @@ CREATE TABLE "movies_genres"
   "movies_id" INT REFERENCES "movies",
   "genres_id" INT REFERENCES "genres"
 );
-
+INSERT INTO "movies_genres"
+  ("movies_id", "genres_id")
+VALUES
+  (1, 2),
+  (2, 2),
+  (3, 13),
+  (4, 2),
+  (4, 4),
+  (5, 1),
+  (5, 6),
+  (6, 8),
+  (7, 1),
+  (8, 6),
+  (9, 2),
+  (9, 4),
+  (10, 11),
+  (10, 1),
+  (11, 11),
+  (11, 1),
+  (12, 6),
+  (13, 6),
+  (14, 2),
+  (14, 4);
 
 --------[ DATA! ]---------
 

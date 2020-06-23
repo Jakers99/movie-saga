@@ -54,7 +54,7 @@ class Edit extends Component{
                 <label for='changeInfo'>Change Description: </label>
                 <textarea className='changeInfo' type='text' onChange={this.changeCategory} value={this.state.description} name='description' />
                 <section>
-                    <button onClick={this.submitNewInfo}>Submit</button>
+                    <button onClick={this.submitNewInfo}>Save</button>
                     <button onClick = {this.cancel}>Cancel</button>
                 </section>
                 <section>
@@ -62,6 +62,11 @@ class Edit extends Component{
                         <h1>{this.props.reduxStore.foundMovie.title}</h1>
                         <p>{this.props.reduxStore.foundMovie.description}</p>
                 </section>
+                <h1>New title and description:</h1>
+                <ul>
+                    <li>{this.props.reduxStore.editInfo.title}</li>
+                        <li>{this.props.reduxStore.editInfo.description}</li>
+                </ul>
             </div> 
             </section>
         )

@@ -38,6 +38,13 @@ const foundMovie = (state = {}, action) => {
     return state
 }
 
+const editInfo = (state=[], action) => {
+    if(action.type === 'NEW_INFO'){
+        return action.payload
+    }
+    return state
+}
+
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -67,6 +74,7 @@ const storeInstance = createStore(
         movies,
         genres,
         foundMovie,
+        editInfo,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
